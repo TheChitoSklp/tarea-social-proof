@@ -1,0 +1,203 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "League Spartan";
+  font-style: normal;
+  line-height: normal;
+  width: 100vw;
+  height: 100vh;
+}
+.pattern-desktop,
+.pattern-desktop-bot {
+  display: none;
+}
+.pattern {
+  position: absolute;
+  z-index: -1;
+}
+.pattern-bot {
+  bottom: 0;
+  right: 0;
+  width: 1085px;
+  height: 673px;
+  flex-shrink: 0;
+}
+.first-section {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  span {
+    display: block;
+    width: 327px;
+    height: 102px;
+    flex-shrink: 0;
+    color: #512051;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -1.429px;
+  }
+  p {
+    width: 320px;
+    color: #927b91;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 25px; /* 131.579% */
+    letter-spacing: -0.633px;
+  }
+}
+.second-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  .rank-container {
+    width: 327px;
+    height: 78px;
+    border-radius: 8px;
+    background: #f7f2f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    span {
+      color: #512051;
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
+}
+.third-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 0;
+  padding-bottom: 2rem;
+  gap: 2rem;
+  .comments {
+    box-sizing: border-box;
+    width: 327px;
+    height: 248px;
+    border-radius: 8px;
+    background: #512051;
+    padding: 32px;
+    .img-container {
+      width: 170px;
+      height: 40px;
+      flex-shrink: 0;
+      gap: 23px;
+      display: flex;
+      img {
+        border-radius: 40px;
+      }
+      .img-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    .person {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+    }
+    .verified {
+      color: #ee69a4;
+      font-size: 17px;
+      font-weight: 400;
+    }
+    p {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: -0.304px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .pattern,
+  .pattern-bot {
+    display: none;
+  }
+  .pattern-desktop,
+  .pattern-desktop-bot {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+  }
+  .pattern-desktop-bot {
+    bottom: 0;
+    right: 0;
+  }
+  body {
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .first-section,
+  .second-section {
+    flex: 1 0 50%;
+    box-sizing: border-box;
+  }
+  .first-section {
+    margin-top: 4rem;
+    gap: 1rem;
+    span {
+      text-align: start;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: -2px;
+      width: 445px;
+      height: 154px;
+    }
+    p {
+      text-align: start;
+      width: 445px;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 25px;
+      letter-spacing: -0.633px;
+    }
+  }
+  .second-section {
+    .rank-container {
+      box-sizing: border-box;
+      width: 445px;
+      height: 56px;
+      justify-content: space-evenly;
+      flex-direction: row;
+    }
+    .rank-1 {
+      margin-right: 6rem;
+    }
+    .rank-3 {
+      margin-left: 6rem;
+    }
+  }
+  .third-section {
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: center;
+    .comments {
+      width: 350px;
+    }
+    .comment-1 {
+      margin-bottom: 2rem;
+    }
+    .comment-3 {
+      margin-top: 2rem;
+    }
+  }
+}
